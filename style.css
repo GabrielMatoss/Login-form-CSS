@@ -1,0 +1,260 @@
+:root {
+  --text-base: #afb6c2;
+  --text-title: #d4ccb6;
+  --background: #191816;
+  --form-background: #24221f;
+  --primary-color: #ffc632;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background: var(--background);
+  background-image: url(./images/side-image-2x.jpg);
+  background-repeat: no-repeat;
+  background-size: 50vw;
+  background-position: right -180px;
+}
+
+.logo {
+  width: 115px;
+  height: 50px;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+form {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 425px;
+  background-color: var(--form-background);
+  margin: 8% 6.3%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 80px;
+}
+
+h1 {
+  color: var(--text-title);
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+}
+
+.header img {
+  width: 25px;
+  position: absolute;
+  top: 5px;
+  right: 92%;
+}
+
+h1 {
+  padding-left: 32px;
+  padding-bottom: 10px;
+}
+
+.header {
+  margin-bottom: 25px;
+  color: var(--text-base);
+  position: relative;
+  text-align: left;
+}
+
+.inputEmail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: var(--text-base);
+  position: relative;
+}
+
+.iconEmail {
+  width: 18px;
+  position: absolute;
+  top: 31px;
+  left: 10px;
+}
+
+.inputPassword {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: var(--text-base);
+  position: relative;
+}
+
+.inputPassword svg {
+  width: 18px;
+  position: absolute;
+  top: 31px;
+  left: 10px;
+}
+
+.inputPassword svg:nth-of-type(2) {
+  left: 91.5%;
+}
+
+.inputEmail input,
+.inputPassword input {
+  background-color: transparent;
+  border: none;
+  outline: white;
+  height: 35px;
+  border: 1px solid var(--text-base);
+  border-radius: 4px;
+  color: var(--text-base);
+  padding-left: 35px;
+  margin-top: 5px;
+  transition: ease-in-out 0.6s;
+}
+.inputEmail input:focus,
+.inputPassword input:focus,
+.inputEmail:focus-within path,
+.inputPassword:focus-within path {
+  border-color: var(--primary-color);
+  stroke: #ffc632;
+}
+
+path {
+  transition: ease-in-out 0.6s;
+}
+
+.checksAndButtons {
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checksAndButtons .link a {
+  text-decoration: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  margin-left: 65%;
+  font-size: 14px;
+}
+
+.link {
+  padding-bottom: 3px;
+}
+
+.checksAndButtons input {
+  display: none;
+}
+.checksAndButtons label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 2px;
+  left: -18px;
+  height: 14px;
+  width: 14px;
+  background-color: #eee;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.checksAndButtons label {
+  position: absolute;
+  bottom: 85px;
+  color: var(--text-base);
+  margin-left: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.checksAndButtons input:checked + label::before {
+  background-image: url(images/check.svg);
+  background-position: center;
+  background-size: contain;
+  background-color: #ffc632;
+}
+
+.checksAndButtons button {
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  color: var(--form-background);
+  background-color: var(--primary-color);
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+.checksAndButtons button:active {
+  background-color: #f7cd65;
+}
+
+.checksAndButtons p {
+  text-align: center;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    background-image: none;
+    overflow: hidden;
+  }
+
+  h1 {
+    padding-bottom: 10px;
+  }
+
+  form {
+    margin: 16% auto;
+  }
+  .link {
+    padding-bottom: 3px;
+  }
+}
+@media screen and (max-width: 569) {
+  .checksAndButtons .link a {
+    margin-left: 96px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .checksAndButtons {
+    text-align: center;
+  }
+  form {
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    margin-top: 20vh;
+    padding: 10px 20px;
+  }
+  .link {
+    padding-bottom: 3px;
+  }
+  .header img {
+    right: 85vw;
+  }
+  h1 {
+    padding-left: 28px;
+    padding-bottom: 10px;
+  }
+  .inputPassword svg:nth-of-type(2) {
+    left: 87%;
+  }
+}
+@media screen and (max-width: 377px) {
+  .checksAndButtons .link a {
+    margin-left: 56%;
+  }
+  .header img {
+    margin-right: -9px;
+  }
+}
