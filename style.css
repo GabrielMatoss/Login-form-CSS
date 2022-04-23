@@ -259,7 +259,7 @@ path {
   }
 }
 
-@media screen and (min-width: 308px) {
+@media screen and (max-width: 308px) {
   .checksAndButtons .link a {
     margin-left: 52%;
   }
